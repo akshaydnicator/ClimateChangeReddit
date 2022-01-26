@@ -77,7 +77,7 @@ for subred in communities:
     while True:
 
         # Select Pushshift API endpoint as url to fetch data. Provide "subred", "after" and "before" as variables to loop through each subreddit and over time
-		url = f"https://api.pushshift.io/reddit/search/submission/?subreddit={subred}&sort=asc&sort_type=created_utc&after={after}&before={before}&size=1000"
+	url = f"https://api.pushshift.io/reddit/search/submission/?subreddit={subred}&sort=asc&sort_type=created_utc&after={after}&before={before}&size=1000"
         attempt = 0
 
         while True:
@@ -97,7 +97,7 @@ for subred in communities:
 
 
         # After a single page of data is fetched from API, loop through all the posts in it one at a time and select only the variables that are required
-		for article in data['data']:
+	for article in data['data']:
 
             try:
                 created_utc = article['created_utc']
@@ -155,15 +155,15 @@ for subred in communities:
                 subreddit = 'NaN'
 
             # Increase the post count by 1 for each post retrieved
-			count+=1
+	    count+=1
 			
-			# Append the fetched data from each post to the empty "articles" dictionary declared at the beginning of the script, with count no. as key for each post
-            articles[count] = 	[count,created_utc,title,selftext,author, score,
-								upvote_ratio,num_comments,total_awards_received,
-                                num_crossposts,full_link,subreddit]
+	    # Append the fetched data from each post to the empty "articles" dictionary declared at the beginning of the script, with count no. as key for each post
+            articles[count] = [count,created_utc,title,selftext,author, score,
+			      upvote_ratio,num_comments,total_awards_received,
+                              num_crossposts,full_link,subreddit]
 
             
-			## Not in use countermeasure; just to give enough sleep time in between while making large number of server requests 
+	    ## Not in use countermeasure; just to give enough sleep time in between while making large number of server requests 
             #if count in [20000,30000,40000]:
              #   time.sleep(30)
 
@@ -173,7 +173,7 @@ for subred in communities:
                 print('Posts: ', count, " | Time taken: ",timedelta(seconds=now_t - start_t))
 
             
-			# Save the fetched data to reddit.db database every time the pulled posts count reaches 50,000
+	    # Save the fetched data to reddit.db database every time the pulled posts count reaches 50,000
             if count % 50000 == 0:
                 times_saved+=1              	# Increase the no. of times data is pushed to SQL database by 1
                 print('Total Count', count)
@@ -182,9 +182,9 @@ for subred in communities:
                 #print('\n\n')
 
                 # Create a dataframe with data from articles dictionary and provide respective column titles
-				df = pd.DataFrame.from_dict(articles,orient='index',columns=['i','utc','title','post','author',
-																			'score','upratio','numcom','awards',
-																			'crossp','link','subreddit'])
+		df = pd.DataFrame.from_dict(articles,orient='index',columns=['i','utc','title','post','author',
+									     'score','upratio','numcom','awards',
+									     'crossp','link','subreddit'])
                 
                 df['title'] = df['title'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
                 df['link'] = df['link'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
@@ -192,18 +192,18 @@ for subred in communities:
                 df['author'] = df['author'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
                 df['subreddit'] = df['subreddit'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
                 
-				print('Saving to SQLite database...\n\n')
+		print('Saving to SQLite database...\n\n')
 
                 # Append the dataframe to SQL table
-				df.to_sql("A",engine,if_exists='append',index=False)
+		df.to_sql("A",engine,if_exists='append',index=False)
                 
                 # Reset the articles dictionary to empty to store new posts to be fetched from Reddit
-				articles = {}
+		articles = {}
                 time.sleep(5)
 
         
-		# Check if more posts exist in a given subreddit or if end date is reached   
-		new_after = f"{created_utc}"
+	# Check if more posts exist in a given subreddit or if end date is reached   
+	new_after = f"{created_utc}"
         if int(new_after)<int(before) and new_after!=after:
             after = new_after
             print("More posts available...\n")
@@ -221,16 +221,16 @@ print(f'Times saved - {times_saved} | Running since: {timedelta(seconds=end_time
 
 # Same as earlier, create dataframe from articles dictionary and append it to SQL database
 df = pd.DataFrame.from_dict(articles,orient='index',columns=['i','utc','title','post','author',
-															'score','upratio','numcom','awards',
-															'crossp','link','subreddit'])
+							     'score','upratio','numcom','awards',
+							     'crossp','link','subreddit'])
 
 df['title'] = df['title'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 df['link'] = df['link'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 df['post'] = df['post'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 df['author'] = df['author'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
 df['subreddit'] = df['subreddit'].map(lambda x: x.encode('unicode-escape').decode('utf-8'))
-print('Saving to SQLite database...\n\n')
 
+print('Saving to SQLite database...\n\n')
 df.to_sql("A",engine,if_exists='append',index=False)
 
 print("Finished fetching data from all of the communitites!")
