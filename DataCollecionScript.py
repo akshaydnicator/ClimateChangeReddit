@@ -14,7 +14,7 @@ from sqlalchemy import create_engine, exc
 engine = create_engine(
     f'sqlite:///C:/Users/Akshay/Desktop/ClimateChange/Database/reddit.db')
 
-# Function to create a table in local reddit.db database to store the fetched data
+# Function to create a table in local reddit.db database to store the fetched data in a table
 
 
 def create_table(name):
