@@ -15,21 +15,21 @@ engine = create_engine(f'sqlite:///C:/Users/Akshay/Desktop/ClimateChange/Databas
 
 # Function to create a table in local reddit.db database to store the fetched data
 def create_table(name):
-	"""
-	The following variables are stored in the SQL database for each post fetched from a given subreddit using Pushshift API;
-	i :			unique id assigned to each Reddit post fetched from Pushshift API
-	utc :		timestamp (Unix epoch time)
-	title :		headline of the Reddit post (text)
-	post :		main body of the post (if available, text)
-	author : 	reddit id of the person who created the post (text)
-	score :		simply the number of upvotes minus the number of downvotes (integer)
-	upratio :	proportion of upvotes (float), =(upvotes/(upvotes+downvotes)), a recent metric; only available for c.10% of the data
-	numcom :	total no. of comments on the post (integer)
-	awards :	given by other users, higher the number more appreciation the post gets (integer)
-	crossp :	total no. of crossposts (shares) by other Reddit users, similar to ReTweets on Twitter (integer)
-	link :		actual link to the reddit post
-	subreddit : subcommunity in which the post appeared
-	"""
+    """
+    The following variables are stored in the SQL database for each post fetched from a given subreddit using Pushshift API;
+    i :			unique id assigned to each Reddit post fetched from Pushshift API
+    utc :		timestamp (Unix epoch time)
+    title :		headline of the Reddit post (text)
+    post :		main body of the post (if available, text)
+    author : 	reddit id of the person who created the post (text)
+    score :		simply the number of upvotes minus the number of downvotes (integer)
+    upratio :	proportion of upvotes (float), =(upvotes/(upvotes+downvotes)), a recent metric; only available for c.10% of the data
+    numcom :	total no. of comments on the post (integer)
+    awards :	given by other users, higher the number more appreciation the post gets (integer)
+    crossp :	total no. of crossposts (shares) by other Reddit users, similar to ReTweets on Twitter (integer)
+    link :		actual link to the reddit post
+    subreddit : subcommunity in which the post appeared
+    """
     sql = f"CREATE TABLE IF NOT EXISTS {name} (i integer, utc datetime, title text, post text, author text, score integer, upratio float, numcom integer, awards integer, crossp integer, link text, subreddit text, PRIMARY KEY (i))"
     engine.execute(sql)
 
