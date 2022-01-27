@@ -25,7 +25,7 @@ sample1 = []
 sample2 = []
 
 
-# Initialize while loop with condition that start <= 2021 July 10 ie a date greater than the last published date in the database
+# Initialize while loop with condition that start <= 2021 July 10 ie a date greater than the last published date in the database (2021 June 30)
 while start <= pd.to_datetime("2021 July 10"):
     print("Processing: ", start)
 
