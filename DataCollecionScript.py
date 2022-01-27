@@ -37,7 +37,9 @@ def create_table(name):
     engine.execute(sql)
 
 
-# Create a new table "A" (titled randomly) using above function with specified sql query in place
+# Create a new table "A" (titled randomly) using above function with specified sql query in place.
+# Another copy of this script was used simultaneously to speed up the data collection process
+# A new table "B" was created in reddit.db database to save the data simulataneously from the second script
 create_table("A")
 
 
