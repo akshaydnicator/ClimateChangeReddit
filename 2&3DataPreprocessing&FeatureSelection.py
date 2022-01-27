@@ -28,15 +28,15 @@ posts['date'] = posts['utc'].map(
     lambda x: datetime.utcfromtimestamp(x).strftime('%Y-%m-%d'))
 posts.set_index('date', inplace=True)
 posts.sort_index(inplace=True, ascending=False)
-
-# Concatenate the text from "title" and "main body" of the reddit posts
-posts['text'] = posts['title'] + "  " + posts['post']
 postsA = None
 postsB = None
-print(posts.head())
 
 
 # PREPROCESSING ==>
+
+# Concatenate the text from "title" and "main body" of the reddit posts
+posts['text'] = posts['title'] + "  " + posts['post']
+print(posts.head())
 
 # Define a list of punctuation marks that are not required for our use case
 puncts = [',', '.', '"', ':', ')', '(', '-', '!', '?', '|', ';', "'", '$', '&', '/', '[', ']', '>', '%', '=', '#', '*', '+', '\\', '•',  '~', '@', '£',
