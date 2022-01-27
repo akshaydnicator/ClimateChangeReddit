@@ -7,7 +7,7 @@ import time
 from datetime import timedelta
 from requests.adapters import HTTPAdapter
 import json
-from sqlalchemy import create_engine, exc
+from sqlalchemy import create_engine
 
 
 # Create an SQL engine to store the fetched posts content from a subreddit to reddit.db database on local disk. The address on local disk can be changed as per convenience

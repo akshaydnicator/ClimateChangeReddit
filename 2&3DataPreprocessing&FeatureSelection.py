@@ -2,14 +2,11 @@
 
 # Import required libraries
 import pandas as pd
-import time
-from datetime import timedelta, datetime
-from sqlalchemy import create_engine, exc
+from datetime import datetime
+from sqlalchemy import create_engine
 import re
 import numpy as np
-import tensorflow as tf
 import tensorflow_hub as hub
-import os
 import json
 
 # LOAD DATA ==>
@@ -77,8 +74,11 @@ posts.drop_duplicates(['clean_text'], inplace=True)
 print("Total number of unique posts: ", len(posts))
 print(posts.head())
 
+# Save a copy of the preprocessed data to be used in other scripts of the project later on
+posts.to_csv("PreProcessedData.csv", index=False)
 
-# FEATURE SELECTION | Retrieve USE EMBEDDINGS for each text post ==>
+
+# FEATURE SELECTION | Retrieve USE EMBEDDINGS for each cleaned text post ==>
 
 # Load the latest model of pretrained USE encoder from Tensorflow Hub
 module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
