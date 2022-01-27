@@ -71,3 +71,12 @@ while start <= pd.to_datetime("2021 July 10"):
     # After the processing is finished for a given month, move the "start" and "end" dates by 30 days to continue to loop/process through next month and onwards...
     start = end
     end = start + timedelta(days=30)
+
+
+# After the final month is processed (exited out of while loop), have a sanity check to see if there are common post ids between Sample 1 & 2
+# For validity, the value should be 0
+print(list(set(sample1).intersection(sample2)))
+
+# Finally, save the post ids of both the samples to a csv file to use later in the project
+sampleIds = pd.DataFrame(data={"sample1": sample1, "sample2": sample2})
+sampleIds.to_csv("samples.csv", index=False)
