@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from datetime import timedelta
 
+
 # Load the cleaned preprocessed data from "PreProcessedData.csv" file saved in the previous step
 df = pd.read_csv("PreProcessedData.csv")
 df["date"] = pd.to_datetime(df["date"])
