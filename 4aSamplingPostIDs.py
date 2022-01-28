@@ -1,4 +1,4 @@
-# This script was used to obtain Sample 1 and 2 time-series from c.1m selected Reddit posts
+# This script was used to obtain post "IDs" for Sample 1 and 2 from c.1m selected Reddit posts
 
 # Import required libraries
 import numpy as np
@@ -77,6 +77,18 @@ while start <= pd.to_datetime("2021 July 10"):
 # For validity, the value should be 0
 print(list(set(sample1).intersection(sample2)))
 
-# Finally, save the post ids of both the samples to a csv file to use later in the project
+# Create a dataframe from the two lists with sample ids
 sampleIds = pd.DataFrame(data={"sample1": sample1, "sample2": sample2})
+
+# Shuffle the dataframe for 1000 times to randomize the order of the monthly time-series and to select 150k random posts per sample later on during clustering
+shuffles = 0
+
+while True:
+    sampleIds = sampleIds.sample(frac=1)
+    shuffles += 1
+
+    if shuffles > 1000:
+        break
+
+# Finally, save the post ids of both the samples to a csv file to use later in the project
 sampleIds.to_csv("samples.csv", index=False)
