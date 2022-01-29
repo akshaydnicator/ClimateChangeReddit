@@ -35,7 +35,7 @@ def elbowSSEs(sampNo=1):          # Default value of "sampNo" ie Sample No. assu
     # Fit the data to KMeans clustering algorithm for a range of "ks" (1 to 100) - both ends included
     # And store the SSE value for each iteration in the SSEs list initialized above
     for k in range(1, 101):
-        kmeans = KMeans(n_clusters=k, random_state=47, n_jobs=-1).fit(X)
+        kmeans = KMeans(n_clusters=k, n_jobs=-1).fit(X)
         SSEs = SSEs + [kmeans.inertia_]
         print(k, ": ", kmeans.inertia_)
 

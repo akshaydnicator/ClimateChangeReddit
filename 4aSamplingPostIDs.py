@@ -46,8 +46,8 @@ while start <= pd.to_datetime("2021 July 10"):
 
     #print("Full: ", len(temp))
 
-    # Keep a fraction of the posts c.15.5% slightly on the higher side of the 150,000 mark for Sample 1
-    samp1 = temp.sample(frac=0.155)
+    # Keep a fraction of the posts around 20%; on the higher side of the 150,000 mark for Sample 1
+    samp1 = temp.sample(frac=0.2)
 
     # Record the posts count in sample 1 so as to match the count with sample 2
     postCount = len(samp1)
@@ -79,16 +79,6 @@ print(list(set(sample1).intersection(sample2)))
 
 # Create a dataframe from the two lists with sample ids
 sampleIds = pd.DataFrame(data={"sample1": sample1, "sample2": sample2})
-
-# Shuffle the dataframe for 1000 times to randomize the order of the monthly time-series and to select 150k random posts per sample later on during clustering
-shuffles = 0
-
-while True:
-    sampleIds = sampleIds.sample(frac=1)
-    shuffles += 1
-
-    if shuffles > 1000:
-        break
 
 # Finally, save the post ids of both the samples to a csv file to use later in the project
 sampleIds.to_csv("samples.csv", index=False)
