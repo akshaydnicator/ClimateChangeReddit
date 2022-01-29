@@ -1,4 +1,4 @@
-# This script was used to run K-means clustering algorithm for k = 20 number of optimum clusters as identified by Elbow Method in the previous step
+# This script was used to run K-means clustering algorithm for k = 20 optimum number of clusters as identified by Elbow Method in the previous step
 # K-means cluster labels were obtained as output corresponding to post "ids" from both Sample 1 and 2
 
 # Import required libraries
