@@ -1,5 +1,5 @@
 # This script was used to complete Step 1 of Clustering & Optimization
-# ie Identifying optimum number of clusters within Sample 1 & 2 using for K-means clustering algorithm using Elbow method
+# ie Identifying optimum number of clusters within Sample 1 & 2 for K-means clustering algorithm using Elbow method
 
 # Import required libraries
 import pandas as pd
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 # Define a function to obtain Sum of Squared Errors (SSEs) for a range of number of clusters (k) for Sample 1 or 2 while running K-means algorithm
-def elbowSSEs(sampNo=1):          # Default value of sampNo assumed as 1
+def elbowSSEs(sampNo=1):          # Default value of "sampNo" ie Sample No. assumed as 1
 
     # Load Sample 1 or 2 embeddings obtained from previous step
     df = pd.read_csv(f"Sample{sampNo}Embeddigs.csv")
