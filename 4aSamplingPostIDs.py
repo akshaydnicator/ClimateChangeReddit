@@ -1,7 +1,6 @@
 # This script was used to obtain post "IDs" for Sample 1 and 2 from c.1m selected Reddit posts
 
 # Import required libraries
-import numpy as np
 import pandas as pd
 from datetime import timedelta
 
