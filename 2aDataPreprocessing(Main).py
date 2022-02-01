@@ -1,4 +1,4 @@
-# This script was used to preprocess the text data of every Reddit post
+# This script was used to preprocess the text data contained within every Reddit post collected
 
 # Import required libraries
 import pandas as pd
@@ -10,8 +10,13 @@ import re
 # LOAD DATA ==>
 
 # Create SQL engine to retrieve the data from Table "A" and "B" in reddit.db database
+# First provide path of the local reddit.db file;
+# path can be changed as per requirement, as if running on a different system
+path = "C:/Users/Akshay/Desktop/ClimateChange/Database"
+
+# Then initiate the SQL engine
 engine = create_engine(
-    'sqlite:///C:/Users/Akshay/Desktop/ClimateChange/Database/reddit.db')
+    f'sqlite:///{path}/reddit.db')
 
 # Retrieve data from database into a dataframe "posts" and make it ready for preprocessing
 postsA = pd.read_sql("""select * from A order by utc asc""", engine)
