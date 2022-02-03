@@ -1,4 +1,4 @@
-# This script was used to visualize the 2D UMAP components obtained from previous step with a scatter plot
+# This script was used to visualize the 2D UMAP components obtained from previous step for Sample 2 with a scatter plot
 
 # Load required libraries
 library(ggplot2)
