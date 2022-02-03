@@ -38,8 +38,14 @@ def runUMAP(sampNo=1):          # Default value of "sampNo" ie Sample No. assume
     # Select the columns to be exported
     df = df[["ids", "UMAPx", "UMAPy"]]
 
+    # Import final labels
+    dff = pd.read_csv(f"FinalLabelsSample{sampNo}.csv")
+
+    # Merge the two dataframes
+    dff = dff.merge(df, how="inner", on="ids")
+
     # Save the output to local disk
-    df.to_csv(f"UMAPComponentsSample{sampNo}.csv", index=False)
+    dff.to_csv(f"UMAPComponentsSample{sampNo}.csv", index=False)
 
 
 # Run the function for Sample 1 and receive the 2 UMAP components in the output file "UMAPComponentsSample1.csv" on local disk in csv format
