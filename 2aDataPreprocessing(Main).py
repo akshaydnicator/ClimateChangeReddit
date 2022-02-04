@@ -78,4 +78,4 @@ print("Total number of unique posts: ", len(posts))
 print(posts.head())
 
 # Save a copy of the preprocessed data to be used in other scripts of the project later on
-posts.to_csv("PreProcessedData.csv", index=False)
+posts.to_csv("PreProcessedData.csv")
