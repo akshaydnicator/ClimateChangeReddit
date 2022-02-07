@@ -3,9 +3,11 @@
 # Import required libraries
 import pandas as pd
 
+# Read the preprocessed data in a dataframe
 df = pd.read_csv("PreProcessedData.csv", usecols=["date", "id"])
 
 
+# Functiopn to calculate propotion of clusters per month between 2008-21
 def calProp(sampNo=1):
 
     sample = pd.read_csv(f"FinalLabelsSample{sampNo}.csv")
@@ -35,5 +37,6 @@ def calProp(sampNo=1):
     TSdf.to_csv(f"Sample{sampNo}ClustersProportion.csv")
 
 
+# Calculate proportion of clusters for monthly time series for Sample 1 & 2
 calProp()
 calProp(sampNo=2)
