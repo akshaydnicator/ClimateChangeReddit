@@ -7,7 +7,7 @@ import pandas as pd
 df = pd.read_csv("PreProcessedData.csv", usecols=["date", "id"])
 
 
-# Functiopn to calculate propotion of clusters per month between 2008-21
+# Function to calculate proportion of clusters per month between 2008-21
 def calProp(sampNo=1):
 
     sample = pd.read_csv(f"FinalLabelsSample{sampNo}.csv")
