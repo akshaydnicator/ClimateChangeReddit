@@ -12,5 +12,5 @@ The repository is ogranized as given below;
 | :---------: | :------: | :------: | :-----------: | :----------------: |
 | **Content** | Workflow related coding scripts and visualizations | Panel figures and other additional figures generated during analysis | Preliminary papers and data summary, panel figures presentation | Data files generated during analysis |
 
-**Languages used:** Python, SQL, R, JavaScript, HTML<br>
-**Libraries required:** datetime, ggplot2, json, matplotlib, numpy, pandas, random, re, requests, seaborn, shifterator, sklearn, spacy, sqlalchemy, tensorflow_hub, time, umap, warnings, wordcloud
+**Languages used:**&emsp;Python, SQL, R, JavaScript, and HTML<br>
+**Libraries required:**&ensp;datetime, ggplot2, json, matplotlib, numpy, pandas, random, re, requests, seaborn, shifterator, sklearn, spacy, sqlalchemy, tensorflow_hub, time, umap, warnings, wordcloud
