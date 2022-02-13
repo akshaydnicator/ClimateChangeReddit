@@ -4,7 +4,7 @@
 
 This repository holds the data and scripts for the project.
 
-The scripts in the **_analysis_** folder are arranged in the order of the workflow steps below:
+The scripts in the **_analysis_** folder are arranged in the order of the workflow steps as given below:
 ![Workflow](https://github.com/akshaydnicator/ClimateChangeReddit/blob/main/Workflow.png)
 
 The repository is ogranized as given below;
