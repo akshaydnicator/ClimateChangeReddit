@@ -1,6 +1,6 @@
 # Project Description
 
-## Identified distinct clusters and driving forces for climate related discussions on Reddit
+## Machine learning based attribution mapping of climate related public perceptions on social media 
 
 This repository holds the data and scripts for the project.
 
