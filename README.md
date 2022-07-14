@@ -1,6 +1,6 @@
 # Project Description
 
-## Machine learning based attribution mapping of climate related public perceptions on social media 
+## Machine learning based attribution mapping of climate related discussions on social media 
 
 This repository holds the data and scripts for the project.
 
