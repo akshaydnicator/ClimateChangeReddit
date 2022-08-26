@@ -1,0 +1,91 @@
+n,r,p-val,-95%CI,+95%CI,y,x
+161,-0.357,0.0,-0.49,-0.21,Energy,Carbon [emissions]
+161,-0.609,0.0,-0.7,-0.5,Energy,Administration
+161,-0.657,0.0,-0.74,-0.56,Energy,Climate Science
+161,-0.261,0.001,-0.4,-0.11,Energy,Global Warming
+161,-0.658,0.0,-0.74,-0.56,Energy,Population & Economy
+161,-0.895,0.0,-0.92,-0.86,Energy,Plastic & Waste
+161,-0.174,0.032,-0.32,-0.02,Energy,Agriculture
+161,-0.681,0.0,-0.76,-0.59,Energy,Wildlife
+161,-0.715,0.0,-0.78,-0.63,Energy,Natural Catastrophes
+161,-0.357,0.0,-0.49,-0.21,Carbon [emissions],Energy
+161,-0.333,0.0,-0.47,-0.18,Carbon [emissions],Administration
+161,-0.074,0.365,-0.23,0.09,Carbon [emissions],Climate Science
+161,-0.07,0.393,-0.23,0.09,Carbon [emissions],Global Warming
+161,-0.22,0.006,-0.37,-0.06,Carbon [emissions],Population & Economy
+161,-0.362,0.0,-0.49,-0.22,Carbon [emissions],Plastic & Waste
+161,-0.04,0.623,-0.2,0.12,Carbon [emissions],Agriculture
+161,-0.34,0.0,-0.47,-0.19,Carbon [emissions],Wildlife
+161,-0.428,0.0,-0.55,-0.29,Carbon [emissions],Natural Catastrophes
+161,-0.609,0.0,-0.7,-0.5,Administration,Energy
+161,-0.333,0.0,-0.47,-0.18,Administration,Carbon [emissions]
+161,-0.472,0.0,-0.59,-0.34,Administration,Climate Science
+161,0.021,0.796,-0.14,0.18,Administration,Global Warming
+161,-0.288,0.0,-0.43,-0.14,Administration,Population & Economy
+161,-0.556,0.0,-0.66,-0.44,Administration,Plastic & Waste
+161,-0.371,0.0,-0.5,-0.23,Administration,Agriculture
+161,-0.558,0.0,-0.66,-0.44,Administration,Wildlife
+161,-0.417,0.0,-0.54,-0.28,Administration,Natural Catastrophes
+161,-0.657,0.0,-0.74,-0.56,Climate Science,Energy
+161,-0.074,0.365,-0.23,0.09,Climate Science,Carbon [emissions]
+161,-0.472,0.0,-0.59,-0.34,Climate Science,Administration
+161,0.146,0.071,-0.01,0.3,Climate Science,Global Warming
+161,-0.415,0.0,-0.54,-0.27,Climate Science,Population & Economy
+161,-0.65,0.0,-0.73,-0.55,Climate Science,Plastic & Waste
+161,-0.309,0.0,-0.45,-0.16,Climate Science,Agriculture
+161,-0.592,0.0,-0.69,-0.48,Climate Science,Wildlife
+161,-0.45,0.0,-0.57,-0.31,Climate Science,Natural Catastrophes
+161,-0.261,0.001,-0.4,-0.11,Global Warming,Energy
+161,-0.07,0.393,-0.23,0.09,Global Warming,Carbon [emissions]
+161,0.021,0.796,-0.14,0.18,Global Warming,Administration
+161,0.146,0.071,-0.01,0.3,Global Warming,Climate Science
+161,-0.283,0.0,-0.42,-0.13,Global Warming,Population & Economy
+161,-0.299,0.0,-0.44,-0.15,Global Warming,Plastic & Waste
+161,-0.114,0.162,-0.27,0.05,Global Warming,Agriculture
+161,-0.047,0.565,-0.2,0.11,Global Warming,Wildlife
+161,-0.218,0.007,-0.36,-0.06,Global Warming,Natural Catastrophes
+161,-0.658,0.0,-0.74,-0.56,Population & Economy,Energy
+161,-0.22,0.006,-0.37,-0.06,Population & Economy,Carbon [emissions]
+161,-0.288,0.0,-0.43,-0.14,Population & Economy,Administration
+161,-0.415,0.0,-0.54,-0.27,Population & Economy,Climate Science
+161,-0.283,0.0,-0.42,-0.13,Population & Economy,Global Warming
+161,-0.631,0.0,-0.72,-0.52,Population & Economy,Plastic & Waste
+161,-0.052,0.523,-0.21,0.11,Population & Economy,Agriculture
+161,-0.422,0.0,-0.54,-0.28,Population & Economy,Wildlife
+161,-0.504,0.0,-0.61,-0.38,Population & Economy,Natural Catastrophes
+161,-0.895,0.0,-0.92,-0.86,Plastic & Waste,Energy
+161,-0.362,0.0,-0.49,-0.22,Plastic & Waste,Carbon [emissions]
+161,-0.556,0.0,-0.66,-0.44,Plastic & Waste,Administration
+161,-0.65,0.0,-0.73,-0.55,Plastic & Waste,Climate Science
+161,-0.299,0.0,-0.44,-0.15,Plastic & Waste,Global Warming
+161,-0.631,0.0,-0.72,-0.52,Plastic & Waste,Population & Economy
+161,-0.271,0.001,-0.41,-0.12,Plastic & Waste,Agriculture
+161,-0.683,0.0,-0.76,-0.59,Plastic & Waste,Wildlife
+161,-0.635,0.0,-0.72,-0.53,Plastic & Waste,Natural Catastrophes
+161,-0.174,0.032,-0.32,-0.02,Agriculture,Energy
+161,-0.04,0.623,-0.2,0.12,Agriculture,Carbon [emissions]
+161,-0.371,0.0,-0.5,-0.23,Agriculture,Administration
+161,-0.309,0.0,-0.45,-0.16,Agriculture,Climate Science
+161,-0.114,0.162,-0.27,0.05,Agriculture,Global Warming
+161,-0.052,0.523,-0.21,0.11,Agriculture,Population & Economy
+161,-0.271,0.001,-0.41,-0.12,Agriculture,Plastic & Waste
+161,-0.143,0.077,-0.3,0.02,Agriculture,Wildlife
+161,-0.279,0.0,-0.42,-0.13,Agriculture,Natural Catastrophes
+161,-0.681,0.0,-0.76,-0.59,Wildlife,Energy
+161,-0.34,0.0,-0.47,-0.19,Wildlife,Carbon [emissions]
+161,-0.558,0.0,-0.66,-0.44,Wildlife,Administration
+161,-0.592,0.0,-0.69,-0.48,Wildlife,Climate Science
+161,-0.047,0.565,-0.2,0.11,Wildlife,Global Warming
+161,-0.422,0.0,-0.54,-0.28,Wildlife,Population & Economy
+161,-0.683,0.0,-0.76,-0.59,Wildlife,Plastic & Waste
+161,-0.143,0.077,-0.3,0.02,Wildlife,Agriculture
+161,-0.539,0.0,-0.64,-0.42,Wildlife,Natural Catastrophes
+161,-0.715,0.0,-0.78,-0.63,Natural Catastrophes,Energy
+161,-0.428,0.0,-0.55,-0.29,Natural Catastrophes,Carbon [emissions]
+161,-0.417,0.0,-0.54,-0.28,Natural Catastrophes,Administration
+161,-0.45,0.0,-0.57,-0.31,Natural Catastrophes,Climate Science
+161,-0.218,0.007,-0.36,-0.06,Natural Catastrophes,Global Warming
+161,-0.504,0.0,-0.61,-0.38,Natural Catastrophes,Population & Economy
+161,-0.635,0.0,-0.72,-0.53,Natural Catastrophes,Plastic & Waste
+161,-0.279,0.0,-0.42,-0.13,Natural Catastrophes,Agriculture
+161,-0.539,0.0,-0.64,-0.42,Natural Catastrophes,Wildlife
